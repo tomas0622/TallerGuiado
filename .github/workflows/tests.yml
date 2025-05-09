@@ -6,7 +6,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: "Taller Guiado/shopping-cart-react"
+        working-directory: "./Taller Guiado/shopping-cart-react"
         
     steps:
       - uses: actions/checkout@v2
