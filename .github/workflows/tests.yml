@@ -19,14 +19,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Start server for visual tests
-        run: npm run dev &
-
       - name: Run unit tests
         run: npm test
 
       - name: Run functional tests
         run: npm run cypress:run
 
+      - name: Start server for visual tests
+        run: npm run dev &
+      
       - name: Run visual regression tests
         run: npm run test:visual
