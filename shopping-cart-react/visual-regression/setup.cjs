@@ -12,7 +12,9 @@ module.exports = async () => {
   }
 
   // Iniciar Puppeteer y guardar el wsEndpoint
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  });
   global.__BROWSER__ = browser;
   fs.writeFileSync(path.join(DIR, 'wsEndpoint'), browser.wsEndpoint());
 };
